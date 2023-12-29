@@ -1,0 +1,40 @@
+:root{
+    --gradient: linear-gradient(
+        90deg,
+        #202067,
+        #695eaf,
+        #202067
+    );
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+img{
+    width: 100px;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 1%;
+    margin-right: 5%;
+}
+.navBtn{
+    padding: 1%;
+    border-radius: 10px;
+    border: none;
+    color: #FAF9F6;
+    background-image: var(--gradient);
+    background-size: 200%;
+    background-position: left;
+    transition: background-position 1s;
+}
+.navBtn:hover{
+    background-position: right;
+}
+#bar{
+    background-color: #202067;
+    color: #FAF9F6;
+}
