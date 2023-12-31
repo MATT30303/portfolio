@@ -5,19 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>portfolio</title>
     <link rel="stylesheet" href="./assets/main.css" />
+    <link rel="stylesheet" href="./assets/bubble.css" />
   </head>
   <body>
+    <!-- Barra desplegable -->
     <div id="bar">
-      <nav>
-        <img src="./assets/pfp-removebg-preview.png" />
-        <span>Fabian Barzola</span>
-        <button class="navBtn">About me</button>
-        <button class="navBtn">Education</button>
-        <button class="navBtn">Projects</button>
-        <button class="navBtn">GitHub</button>
-      </nav>
+      <div id="toggleBtn">
+        <span class="line-1"></span>
+        <span class="line-2"></span>
+        <span class="line-3"></span>
+      </div>
+
+      <ul>
+        <li><img src="./assets/pfp-removebg-preview.png" /></li>
+        <li><span>Fabian Barzola</span></li>
+        <li class="navLi"><button class="navBtn">About me</button></li>
+        <li class="navLi"><button class="navBtn">Education</button></li>
+        <li class="navLi"><button class="navBtn">Projects</button></li>
+        <li class="navLi"><button class="navBtn">GitHub</button></li>
+      </ul>
     </div>
 
+    <!-- Fondo de efecto burbuja -->
     <div class="gradient-bg">
       <svg xmlns="http://www.w3.org/2000/svg">
         <defs>
@@ -51,5 +60,6 @@
     <div>ajlk;sfa;klsfj</div>
 
     <script type="module" src="./assets/bubbles.js"></script>
+    <script type="module" src="./assets/bar.js"></script>
   </body>
 </html>

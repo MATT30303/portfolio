@@ -1,5 +1,3 @@
-console.log("que onda");
-
 const interBubble = document.querySelector(".interactive");
 
 document.addEventListener("DOMContentLoaded", () => {
