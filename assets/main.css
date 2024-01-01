@@ -6,8 +6,9 @@
         #202067 
     );
     --barGradient: linear-gradient(
-        #121212 10%,
-        #202067 50%
+        #202067 10%,   
+        #121212 70%,
+        #202067 90%
     );
 }
 
@@ -22,25 +23,50 @@
 #bar{
     width: 12vw;
     height: 100%;
-    background: var(--barGradient);
-    background-size: 100%;
+    background-image: var(--barGradient);
+    background-size: 100% 300%;
+    background-position: top;
+    box-shadow: .5rem 0rem 1rem #121212;
     z-index: 5;
     position: fixed;
-    left: -12vw;
-    transition: .4s ease;
+    left: 0vw;
+    transition: left .4s, background-position .8s ease-in;
+
+    .line-1{
+        transform: translateY(0%) rotate(0deg);
+        transition: 0.4s;
+    }
+    .line-2{
+        opacity: 1;
+        transition: 0.4s;
+    }
+    .line-3{
+        transform: translateY(0%) rotate(0deg);
+        transition: 0.4s;
+    }
 }
 #bar.active{
     left: 0;
-}
+    background-position: bottom;
+    .line-1{
+        transform: translateY(200%) rotate(45deg);
+        transition: 0.4s;
+    }
+    .line-2{
+        opacity: 0;
+        transition: 0.4s;
+    }
+    .line-3{
+        transform: translateY(-200%) rotate(-45deg);
+        transition: 0.4s;
+    }
+} 
 #bar ul li{
     font-size: 30px;
     list-style: none;
     color: #FAF9F6;
     width: 100%;
     text-align: center;
-}
-.navLi{
-    padding-top: 8rem;
 }
 #bar #toggleBtn{
     position: absolute;
@@ -67,10 +93,12 @@
 
 img{
     width: 8vw;
+    padding-top: 1rem;
     padding-bottom: 1rem;
 }
 
 .navBtn{
+    font-size: 15px;
     padding: 1rem;
     border-radius: .5rem;
     border: none;
@@ -84,4 +112,19 @@ img{
 }
 .navBtn:hover{
     background-position: right;
+}
+ul .navLi{
+    padding-top: 5rem;
+    height: 10vh;
+    justify-content: space-between;
+}
+
+/* estabas haciendo el glow de la barra */
+#glowBar{
+    width: .250rem;
+    height: 2rem;
+    background: #FAF9F6;
+    box-shadow: inset .5rem .5rem .5rem #695eaf;
+    display: block;
+    border-radius: 0.125rem;
 }
