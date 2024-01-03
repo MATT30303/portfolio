@@ -149,12 +149,15 @@ ul .navLi{
 }
 .startTxt{
     padding: 1rem;
-    border-radius: 1rem 1rem 1rem 1rem;
+    border-radius: 0rem 0rem 1rem 1rem;
     transition: .8s ease;
 }
-.startTxt:hover{
+.startTxt{
     backdrop-filter: brightness(50%);
     box-shadow: .5rem .5rem 1rem #202067;
+}
+#txt1{
+    border-radius: 1rem 1rem 1rem 1rem;
 }
 #arrowButton{
     position: absolute;
@@ -173,7 +176,7 @@ ul .navLi{
     aspect-ratio: 1/1;
 }
 #arrow:active{
-    animation: arrow .2s ;
+    animation: arrow .2s;
 }
 /*te quedaste animando la flecha*/
 @keyframes arrow {
