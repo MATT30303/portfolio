@@ -13,6 +13,13 @@
     --fmInter: 'Inter', sans-serif;
     --fmMont: 'Montserrat', sans-serif;
     --fmRoboto: 'Roboto', sans-serif;
+
+    --crl1: #202067;
+    --crl2: #38357f;
+    --crl3: #514a97;
+    --crl4: #695eaf;
+    --crl5: #8173c7;
+    --crl6: #121212;
 }
 
 *{
@@ -23,6 +30,7 @@
 ::-webkit-scrollbar{
     display: none;
 }
+/* barra lateral */
 #bar{
     width: 12vw;
     height: 100%;
@@ -71,6 +79,8 @@
     width: 100%;
     text-align: center;
 }
+/* boton para activar el menu*/
+
 #bar #toggleBtn{
     z-index: 1;
     position: absolute;
@@ -82,6 +92,7 @@
     z-index: 10;
     box-shadow: .250rem .250rem 1rem black;
     backdrop-filter:  brightness(50%);
+    cursor: pointer;
 }
 #toggleBtn span{
     width: 2rem;
@@ -95,6 +106,8 @@
     margin-bottom: .250rem;
 }
 
+
+/* objetos del menu */
 
 img{
     width: 8vw;
@@ -123,6 +136,9 @@ ul .navLi{
     height: 10vh;
     justify-content: space-between;
 }
+
+
+/* inicio  */
 .startText{
     font-family: var(--fmInter);
     width: 100%;
@@ -159,6 +175,8 @@ ul .navLi{
 #txt1{
     border-radius: 1rem 1rem 1rem 1rem;
 }
+
+/* flecha + animacion */
 #arrowButton{
     position: absolute;
     display: flex;
@@ -178,9 +196,31 @@ ul .navLi{
 #arrow:active{
     animation: arrow .2s;
 }
-/*te quedaste animando la flecha*/
 @keyframes arrow {
     0%{ transform: translateY(0); }
     50%{ transform: translateY(1rem); }
     100%{ transform: translateY(0); }
+}
+/* separador de secciones*/
+
+.slant,.slant2{
+    position: absolute;
+    background-color: transparent;
+    fill: var(--crl2);
+    height: 7rem;
+    width: 100%;
+    bottom: -15vh;
+    z-index: 1;
+}
+.slant2{
+    transform: scaleX(-1);
+}
+
+/* About me*/
+.aboutMe{
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--crl2);
+    z-index: 1;
 }
