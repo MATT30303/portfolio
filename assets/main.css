@@ -20,6 +20,7 @@
     --crl4: #695eaf;
     --crl5: #8173c7;
     --crl6: #121212;
+    --crl7: #FAF9F6;
 }
 
 *{
@@ -206,7 +207,7 @@ ul .navLi{
 .slant,.slant2{
     position: absolute;
     background-color: transparent;
-    fill: var(--crl2);
+    fill: var(--crl1);
     height: 7rem;
     width: 100%;
     bottom: -15vh;
@@ -218,9 +219,49 @@ ul .navLi{
 
 /* About me*/
 .aboutMe{
+    font-family: var(--fmMont);
     position: absolute;
     width: 100vw;
     height: 100vh;
-    background-color: var(--crl2);
+    background-color: var(--crl1);
     z-index: 1;
+    color: var(--crl7);
+}
+.aboutMeTittle{
+    font-size: 3rem;
+    display: flex;
+    justify-content: center;
+    padding-top: 3rem;
+}
+.aboutMeTittle span{
+    border: solid;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    border-radius: 0rem 0rem 1rem 1rem;
+    padding: 0rem 1rem 0rem 1rem;
+}
+.AboutMeTxt{
+    margin-left: 2rem;
+    margin-top: 2rem;
+    font-size: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    width: 50ch;
+}
+.AboutMeTxt span{
+    padding-top: 1.5rem;
+}
+.question{
+    font-style: italic;
+    margin-top: 3rem;
+    border-radius: .5rem;
+    border: solid .100rem;
+    width: fit-content;
+    padding: .5rem 1rem .5rem .5rem;
+    box-shadow: 0rem .250rem 0rem var(--crl7);
+}
+.aboutMeImg{
+    float: right;
+    padding-top: 5rem;
 }
