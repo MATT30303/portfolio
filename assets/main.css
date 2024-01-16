@@ -10,6 +10,8 @@
         #121212 70%,
         #202067 90%
     );
+
+
     --fmInter: 'Inter', sans-serif;
     --fmMont: 'Montserrat', sans-serif;
     --fmRoboto: 'Roboto', sans-serif;
@@ -218,14 +220,20 @@ ul .navLi{
 }
 
 /* About me*/
+.containerAboutMe{
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    
+}
 .aboutMe{
     font-family: var(--fmMont);
     position: absolute;
     width: 100vw;
     height: 100vh;
-    background-color: var(--crl1);
     z-index: 1;
     color: var(--crl7);
+    background-color: var(--crl1)
 }
 .aboutMeTittle{
     font-size: 3rem;
@@ -261,7 +269,62 @@ ul .navLi{
     padding: .5rem 1rem .5rem .5rem;
     box-shadow: 0rem .250rem 0rem var(--crl7);
 }
-.aboutMeImg{
-    float: right;
-    padding-top: 5rem;
+#aboutMeImg{
+    position: absolute;
+    width: 10rem;
+    right: 20vw;
+    top: 40vh;
+    z-index: 3;
+    transition: filter .5s linear;
+    transition: .8s;
+}
+#aboutMeImg:hover{
+    cursor: pointer;
+    filter: drop-shadow(0 0 5rem #000000);
+}
+
+#aboutMeImg.active{
+    transform: scale(.7);
+    top: 10vh;
+    right: 20%;
+    transition: all .8s;
+}
+
+#cardAboutMe{
+    position: absolute;
+    width: 30vw;
+    height: 60vh;
+    background-color: var(--crl2);
+    top: 20vh;
+    right: 9vw;
+    border: solid;
+    border-radius: 1rem 1rem 1rem 1rem;
+    box-shadow: .25rem .25rem 0rem #FAF9F6;
+    opacity: 1;
+    
+}
+#cardAboutMe.active{
+    opacity: 1;
+    
+}
+#coverCard{
+    position: absolute;
+    width: 35vw;
+    height: 66vh;
+    right: 6vw;
+    bottom: 17vh;
+    background-color: var(--crl1);
+    z-index: 1;
+    animation: card2 1s;
+}
+#coverCard.active{
+    animation: card 1s forwards;
+}
+@keyframes card {
+    0%{ height: 66vh;}
+    100%{ height: 0vh;}
+}
+@keyframes card2 {
+    0%{ height: 0vh;}
+    100%{ height: 66vh;}
 }
