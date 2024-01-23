@@ -33,6 +33,9 @@
 ::-webkit-scrollbar{
     display: none;
 }
+html{
+    scroll-behavior: smooth;
+}
 /* barra lateral */
 #bar{
     width: 12vw;
@@ -256,6 +259,7 @@ ul .navLi{
     display: flex;
     flex-direction: column;
     width: 50ch;
+    padding-left: 1rem;
 }
 .AboutMeTxt span{
     padding-top: 1.5rem;
@@ -269,6 +273,9 @@ ul .navLi{
     padding: .5rem 1rem .5rem .5rem;
     box-shadow: 0rem .250rem 0rem var(--crl7);
 }
+
+
+/* Cartita con mi info*/
 #aboutMeImg{
     position: absolute;
     width: 10rem;
@@ -290,6 +297,7 @@ ul .navLi{
     transition: all .8s;
 }
 
+
 #cardAboutMe{
     position: absolute;
     width: 30vw;
@@ -301,11 +309,27 @@ ul .navLi{
     border-radius: 1rem 1rem 1rem 1rem;
     box-shadow: .25rem .25rem 0rem #FAF9F6;
     opacity: 1;
-    
 }
 #cardAboutMe.active{
     opacity: 1;
     
+}
+.info{
+    font-size: 1.125rem;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    padding-block: 15%;
+    padding-left: 2rem;
+    color: var(--crl7);
+}
+.info a{
+    text-decoration: none;
+    color: var(--crl7);
+}
+.contactImg{
+    width: 2rem;
+    padding: 0rem .5rem 0rem 0rem;
 }
 #coverCard{
     position: absolute;
@@ -328,3 +352,5 @@ ul .navLi{
     0%{ height: 0vh;}
     100%{ height: 66vh;}
 }
+
+/**/
