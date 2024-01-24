@@ -23,6 +23,7 @@
     --crl5: #8173c7;
     --crl6: #121212;
     --crl7: #FAF9F6;
+    --crl8: #38255c;
 }
 
 *{
@@ -241,8 +242,8 @@ ul .navLi{
 
     background-color: #212223;
     background-image: radial-gradient(circle, transparent 1rem, #212223 1rem),
-    linear-gradient(var(--crl2) 0.5rem, transparent 0.5rem),
-    linear-gradient(90deg, var(--crl2) 0.5rem, transparent 0.5rem);
+    linear-gradient(var(--crl8) 0.5rem, transparent 0.5rem),
+    linear-gradient(90deg, var(--crl8) 0.5rem, transparent 0.5rem);
     background-size: 5rem 5rem;
     background-position: 5.25rem 5.25rem, 2.5rem 2.5rem, 2.5rem 2.5rem;
 }
@@ -268,7 +269,6 @@ ul .navLi{
     flex-direction: column;
     width: 50ch;
     padding-left: 1rem;
-    filter: drop-shadow(0rem 0rem 1rem var(--crl5));
 }
 .AboutMeTxt span{
     padding-top: 1.5rem;
@@ -281,7 +281,6 @@ ul .navLi{
     width: fit-content;
     padding: .5rem 1rem .5rem .5rem;
     box-shadow: 0rem .250rem 0rem var(--crl7);
-    filter: drop-shadow(0rem 0rem .05rem var(--crl5));
 }
 
 
