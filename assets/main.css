@@ -30,9 +30,11 @@
     padding: 0;
     
 }
+
 ::-webkit-scrollbar{
     display: none;
 }
+
 html{
     scroll-behavior: smooth;
 }
@@ -198,6 +200,7 @@ ul .navLi{
 #arrow{
     width: 2.5rem;
     aspect-ratio: 1/1;
+    z-index: 1;
 }
 #arrow:active{
     animation: arrow .2s;
@@ -212,7 +215,7 @@ ul .navLi{
 .slant,.slant2{
     position: absolute;
     background-color: transparent;
-    fill: var(--crl1);
+    fill: #212223;
     height: 7rem;
     width: 100%;
     bottom: -15vh;
@@ -224,10 +227,9 @@ ul .navLi{
 
 /* About me*/
 .containerAboutMe{
-    position: absolute;
+    position: relative;
     width: 100vw;
-    height: 100vh;
-    
+    height: 100vh; 
 }
 .aboutMe{
     font-family: var(--fmMont);
@@ -236,7 +238,13 @@ ul .navLi{
     height: 100vh;
     z-index: 1;
     color: var(--crl7);
-    background-color: var(--crl1)
+
+    background-color: #212223;
+    background-image: radial-gradient(circle, transparent 1rem, #212223 1rem),
+    linear-gradient(var(--crl2) 0.5rem, transparent 0.5rem),
+    linear-gradient(90deg, var(--crl2) 0.5rem, transparent 0.5rem);
+    background-size: 5rem 5rem;
+    background-position: 5.25rem 5.25rem, 2.5rem 2.5rem, 2.5rem 2.5rem;
 }
 .aboutMeTittle{
     font-size: 3rem;
@@ -260,6 +268,7 @@ ul .navLi{
     flex-direction: column;
     width: 50ch;
     padding-left: 1rem;
+    filter: drop-shadow(0rem 0rem 1rem var(--crl5));
 }
 .AboutMeTxt span{
     padding-top: 1.5rem;
@@ -272,6 +281,7 @@ ul .navLi{
     width: fit-content;
     padding: .5rem 1rem .5rem .5rem;
     box-shadow: 0rem .250rem 0rem var(--crl7);
+    filter: drop-shadow(0rem 0rem .05rem var(--crl5));
 }
 
 
@@ -279,7 +289,7 @@ ul .navLi{
 #aboutMeImg{
     position: absolute;
     width: 10rem;
-    right: 20vw;
+    right: 24vw;
     top: 40vh;
     z-index: 3;
     transition: filter .5s linear;
@@ -287,33 +297,70 @@ ul .navLi{
 }
 #aboutMeImg:hover{
     cursor: pointer;
-    filter: drop-shadow(0 0 5rem #000000);
+    filter: drop-shadow(0 0 1rem #fff);
 }
 
 #aboutMeImg.active{
     transform: scale(.7);
     top: 10vh;
-    right: 20%;
+    right: 24vw;
     transition: all .8s;
 }
 
-
 #cardAboutMe{
     position: absolute;
-    width: 30vw;
+    width: 25vw;
     height: 60vh;
     background-color: var(--crl2);
     top: 20vh;
-    right: 9vw;
+    right: 15vw;
     border: solid;
     border-radius: 1rem 1rem 1rem 1rem;
     box-shadow: .25rem .25rem 0rem #FAF9F6;
     opacity: 1;
+    animation: cardClose 1s linear forwards;
+    animation-delay: 300ms;
+    & .fromL1{animation: fromLeftClose 1s forwards; animation-delay: 500ms;}
+    & .fromR1{animation: fromRightClose 1s forwards; animation-delay: 400ms;}
+    & .fromL2{animation: fromLeftClose 1s forwards; animation-delay: 300ms;}
+    & .fromR2{animation: fromRightClose 1s forwards; animation-delay: 200ms;}
+    & .fromL3{animation: fromLeftClose 1s forwards; animation-delay: 100ms;}
+    & .fromR3{animation: fromRightClose 1s forwards; animation-delay: 0ms;}
 }
 #cardAboutMe.active{
-    opacity: 1;
-    
+    animation: cardOpen 1s linear forwards;
+    & .fromL1{
+        opacity: 0;
+        animation: fromLeft 1s forwards;
+        animation-delay: 300ms;
+    }
+    & .fromR1{
+        opacity: 0;
+        animation: fromRight 1s forwards;
+        animation-delay: 400ms;
+    }
+    & .fromL2{
+        opacity: 0;
+        animation: fromLeft 1s forwards;
+        animation-delay: 500ms;
+    }
+    & .fromR2{
+        opacity: 0;
+        animation: fromRight 1s forwards;
+        animation-delay: 600ms;
+    }
+    & .fromL3{
+        opacity: 0;
+        animation: fromLeft 1s forwards;
+        animation-delay: 700ms;
+    }
+    & .fromR3{
+        opacity: 0;
+        animation: fromRight 1s forwards;
+        animation-delay: 800ms;
+    }
 }
+
 .info{
     font-size: 1.125rem;
     display: flex;
@@ -322,6 +369,7 @@ ul .navLi{
     padding-block: 15%;
     padding-left: 2rem;
     color: var(--crl7);
+    opacity: 1;
 }
 .info a{
     text-decoration: none;
@@ -331,26 +379,45 @@ ul .navLi{
     width: 2rem;
     padding: 0rem .5rem 0rem 0rem;
 }
-#coverCard{
-    position: absolute;
-    width: 35vw;
-    height: 66vh;
-    right: 6vw;
-    bottom: 17vh;
-    background-color: var(--crl1);
-    z-index: 1;
-    animation: card2 1s;
+
+
+@keyframes cardClose {
+    0%{ height: 60vh;}
+    99%{ border: solid;}
+    100%{ height: 0vh; border: none;}
 }
-#coverCard.active{
-    animation: card 1s forwards;
-}
-@keyframes card {
-    0%{ height: 66vh;}
-    100%{ height: 0vh;}
-}
-@keyframes card2 {
+@keyframes cardOpen {
     0%{ height: 0vh;}
-    100%{ height: 66vh;}
+    100%{ height: 60vh;}
+}
+@keyframes fromLeft{
+    0%{ translate: 100px; opacity: 0;}
+    100%{ translate: 0; opacity: 1;}
+}
+@keyframes fromRight{
+    0%{ translate: -100px; opacity: 0;}
+    100%{ translate: 0; opacity: 1;}
+}
+@keyframes fromLeftClose{
+    100%{ translate: 100px; opacity: 0;}
+    0%{ translate: 0; opacity: 1;}
+}
+@keyframes fromRightClose{
+    100%{ translate: -100px; opacity: 0;}
+    0%{ translate: 0; opacity: 1;}
 }
 
-/**/
+/*projects section*/
+
+.projectsContainer{
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+}
+.projects{
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background-color: #38357f;
+    z-index: 1;
+}
