@@ -45,7 +45,7 @@ html{
     height: 100%;
     background-image: var(--barGradient);
     background-size: 100% 300%;
-    background-position: top;
+    background-position: bottom;
     box-shadow: .5rem 0rem 1rem #121212;
     position: fixed;
     z-index: 10;
@@ -67,7 +67,6 @@ html{
 }
 #bar.active{
     left: 0;
-    background-position: bottom;
     .line-1{
         transform: translateY(200%) rotate(45deg);
         transition: 0.4s;
@@ -288,7 +287,7 @@ ul .navLi{
 #aboutMeImg{
     position: absolute;
     width: 10rem;
-    right: 24vw;
+    right: 23vw;
     top: 40vh;
     z-index: 3;
     transition: filter .5s linear;
@@ -302,7 +301,7 @@ ul .navLi{
 #aboutMeImg.active{
     transform: scale(.7);
     top: 10vh;
-    right: 24vw;
+    right: 23vw;
     transition: all .8s;
 }
 
@@ -312,7 +311,7 @@ ul .navLi{
     height: 60vh;
     background-color: var(--crl2);
     top: 20vh;
-    right: 15vw;
+    right: 14.5vw;
     border: solid;
     border-radius: 1rem 1rem 1rem 1rem;
     box-shadow: .25rem .25rem 0rem #FAF9F6;
