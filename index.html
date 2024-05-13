@@ -23,7 +23,7 @@
 
       <!-- botones del menu -->
       <ul>
-        <li><img src="./assets/img/pfp-removebg-preview.png" /></li>
+        <li><img id="ImgMenu" src="./assets/img/pfp-removebg-preview.png"/></li>
         <li><span>Fabian Barzola</span></li>
         <li class="navLi"><button class="navBtn">About me</button></li>
         <li class="navLi"><button class="navBtn">Projects</button></li>
@@ -98,13 +98,39 @@
         <span>In the past 2 years i have learned C, Java, Html, Css, JavaScript</span>
       </div>
     </div>
-    <a href=""><button id="arrowButton"><img src="./assets/img/arrow.png" id="arrow" /></button></a>
+    <a href="#proyectos"><button id="arrowButton"><img src="./assets/img/arrow.png" id="arrow" /></button></a>
   </div>
 
-  <div class="projectsContainer">
-    <div class="projects">
-      <p>ahskjld</p>
-    </div>
+    <!-- projects seccion -->
+
+  <div class="projectsContainer" id="proyectos">
+    <ul id="ProjectList">
+      <li>
+          <div class="projects">
+            <img class="projectImg" src="./assets/img/bandera acomodada real.png" alt="">
+            <div class="projectTxt">
+              <span id="projectTittle">Electronic Voting System.</span>
+              <span id="projectDesc">Voting system for a uni project.</span>
+            </div>
+            <div class="projectArrow">
+              <img class="pArrow" src="./assets/img/arrow.png">
+            </div>
+          </div>
+        </li>
+      <li>
+            <div class="projects">
+              <img class="projectImg" src="./assets/img/white antartic.png" alt="">
+                <div class="projectTxt">
+                  <span id="projectTittle">Icecream Shop, Ecommerce.</span>
+                  <span id="projectDesc">Small Icream shop for a uni project, only front-end.</span>
+                </div>
+                <div class="projectArrow">
+                  <img class="pArrow" src="./assets/img/arrow.png">
+                </div>
+            </div>
+      </li>
+    </ul>
+
   </div>
 
 

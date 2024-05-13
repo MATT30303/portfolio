@@ -117,7 +117,7 @@ html{
 
 /* objetos del menu */
 
-img{
+#ImgMenu{
     width: 8vw;
     padding-top: 1rem;
     padding-bottom: 1rem;
@@ -411,11 +411,64 @@ ul .navLi{
     position: absolute;
     width: 100vw;
     height: 100vh;
+    background-color: var(--crl2);
+}
+
+
+#projectList{
+    height: 100%;
+    width: 100%;
+    list-style: none;
+}
+li{
+    padding-top: 2rem;
+    display: flex;
+    justify-content: center;
+}
+.projectImg{
+    width: 20rem;
+    cursor: pointer;    
+    transition: .4s linear;
 }
 .projects{
-    position: absolute;
-    width: 100vw;
-    height: 100vh;
-    background-color: #38357f;
-    z-index: 1;
+    width: 50%;
+    background-color: #1f1447;
+    display: flex;
+    color: #FAF9F6;
+    font-size: x-large;
 }
+.projectTxt{  
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 5rem;
+}
+#projectTittle{
+
+}
+#projectDesc{
+    font-size: large;
+}
+.projectArrow{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.pArrow{
+    position: relative;
+    transform: rotate(-90deg);
+    width: 2.5rem;
+    height: 2.5rem;
+    filter: invert(1);
+    cursor: pointer;
+}
+
+.projectImg:hover{
+    box-shadow: 0 0 1rem #FAF9F6;
+}
+
+
